@@ -4,8 +4,6 @@ server:
 spring:
   profiles:
     active: dev
-  application:
-    name: bootRedisSearch
   datasource:
     url: jdbc:mysql://39.100.182.216:3406/husj?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false&transformedBitIsBoolean=true&serverTimezone=GMT%2B8
     username: root
