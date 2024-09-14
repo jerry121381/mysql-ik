@@ -1,4 +1,4 @@
-package com.lxsy.modules.vo;
+package com.lxsy.modules.user.vo;
 
 import lombok.Data;
 

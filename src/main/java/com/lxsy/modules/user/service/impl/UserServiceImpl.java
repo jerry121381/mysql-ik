@@ -3,7 +3,7 @@ package com.lxsy.modules.user.service.impl;
 import com.lxsy.modules.user.entity.User;
 import com.lxsy.modules.user.mapper.UserMapper;
 import com.lxsy.modules.user.service.UserService;
-import com.lxsy.modules.vo.UserVO;
+import com.lxsy.modules.user.vo.UserVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

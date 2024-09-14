@@ -1,7 +1,7 @@
 package com.lxsy.modules.user.controller;
 
 import com.lxsy.modules.user.service.UserService;
-import com.lxsy.modules.vo.UserVO;
+import com.lxsy.modules.user.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

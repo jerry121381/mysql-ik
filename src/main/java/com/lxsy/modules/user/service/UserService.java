@@ -1,6 +1,6 @@
 package com.lxsy.modules.user.service;
 
-import com.lxsy.modules.vo.UserVO;
+import com.lxsy.modules.user.vo.UserVO;
 
 /**
  * @description: user service
