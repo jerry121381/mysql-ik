@@ -1,5 +1,6 @@
 package com.lxsy.modules.brand.service;
 
+import com.lxsy.modules.brand.dto.BindKeywordDTO;
 import com.lxsy.modules.brand.entity.Brand;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -10,4 +11,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  **/
 public interface BrandService extends IService<Brand> {
 
+    boolean bindKeyword(BindKeywordDTO dto);
 }

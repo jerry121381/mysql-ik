@@ -1,9 +1,6 @@
 package com.lxsy.modules.brand.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -64,6 +61,7 @@ public class Brand implements Serializable {
     /**
      * 删除标识：0-正常，1-已删除
      */
+    @TableLogic
     private Integer isDeleted;
 
     /**
