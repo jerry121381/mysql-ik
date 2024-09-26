@@ -27,6 +27,6 @@ public class BrandController {
 
     @PostMapping("/brand/bind_category")
     public boolean bindCategory() {
-
+        return true;
     }
 }
