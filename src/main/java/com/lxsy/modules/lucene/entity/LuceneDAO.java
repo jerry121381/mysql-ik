@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @description: lucene dao
@@ -25,15 +26,17 @@ public class LuceneDAO {
     private IndexWriter indexWriter;
 
 
-    public void createBrandIndex(Brand brand) throws IOException {
-        Document doc = new Document();
-        Integer id = brand.getId();
-        doc.add(new StoredField("id", id));
-        doc.add(new NumericDocValuesField("sort_id", id));
-        doc.add(new TextField("title", brand.getBrandName(), Field.Store.YES));
-        log.info(doc.toString());
-        // 存储到索引库
-        indexWriter.addDocument(doc);
-        indexWriter.commit();
+    public void createBrandIndex(List<Brand> brandList) throws IOException {
+        for (Brand brand : brandList) {
+            Document doc = new Document();
+            Integer id = brand.getId();
+            doc.add(new StoredField("id", id));
+            doc.add(new NumericDocValuesField("sort_id", id));
+            doc.add(new TextField("title", brand.getBrandName(), Field.Store.YES));
+            log.info(doc.toString());
+            // 存储到索引库
+            indexWriter.addDocument(doc);
+            indexWriter.commit();
+        }
     }
 }

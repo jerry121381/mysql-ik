@@ -19,4 +19,23 @@
         <result property="isShow" column="is_show" jdbcType="TINYINT"/>
     </resultMap>
 
+    <select id="selectAll" resultMap="BaseResultMap">
+        select id,
+               brand_number,
+               brand_name,
+               brand_image,
+               brand_prove_image,
+               joint_declaration,
+               brand_status,
+               tenant_code,
+               is_deleted,
+               create_time,
+               update_time,
+               is_show,
+               keyword
+        from husj.lxsy_brand
+        where is_deleted = 0
+          and is_show = 1
+    </select>
+
 </mapper>

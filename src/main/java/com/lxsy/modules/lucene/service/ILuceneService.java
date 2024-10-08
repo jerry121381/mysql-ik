@@ -1,12 +1,15 @@
 package com.lxsy.modules.lucene.service;
 
-import org.springframework.stereotype.Service;
+import java.io.IOException;
 
 /**
  * @description: lucene service
  * @author: husj
  * @create: 2024-09-29
  **/
-@Service
-public class ILuceneService {
+public interface ILuceneService {
+
+    void createIndex() throws IOException;
+
+    void synProductCreatIndex() throws IOException;
 }
